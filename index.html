@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Анонімна мережа — зелено-чорна</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Анонімна мережа</h1>
+      <p class="sub">Ніяких нікнеймів, ніяких аватарів — лише повідомлення.</p>
+    </header>
+
+    <main class="main">
+      <section class="composer">
+        <textarea id="postInput" maxlength="1000" placeholder="Напишіть повідомлення..." rows="4"></textarea>
+        <div class="controls">
+          <div class="left-controls">
+            <button id="postBtn" class="btn primary">Опублікувати</button>
+            <button id="clearBtn" class="btn">Очистити стрічку</button>
+          </div>
+          <div class="right-controls">
+            <button id="exportBtn" class="btn">Експорт</button>
+            <button id="importBtn" class="btn">Імпорт</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="feed" id="feed">
+        <!-- Посты будут рендериться тут -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Локальна демонстрація — без бекенда. Для реальної мультиюзер-синхронізації потрібен сервер.</small>
+    </footer>
+  </div>
+
+  <div id="importModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Імпорт стрічки (JSON)</h3>
+      <textarea id="importArea" rows="8" placeholder="Вставте JSON, отриманий від іншого користувача..."></textarea>
+      <div class="modal-actions">
+        <button id="doImportBtn" class="btn primary">Імпорт</button>
+        <button id="cancelImportBtn" class="btn">Скасувати</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="static/app.js" defer></script>
+</body>
+</html>
