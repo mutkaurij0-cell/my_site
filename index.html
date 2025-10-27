@@ -4,7 +4,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Анонімна мережа — зелено-чорна</title>
-  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="./static/style.css">
+  <style>
+:root{--bg:#091009;--panel:#07110a;--accent:#2ecc71;--accent-2:#27ae60;--muted:#9bb39a;--text:#eaf7ec}
+*{box-sizing:border-box}
+html,body,#app{height:100%}
+body{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#041006);color:var(--text);margin:0;padding:24px}
+.app{max-width:900px;margin:0 auto}
+.header{background:linear-gradient(90deg,var(--panel),#08120b);padding:18px;border-radius:12px;border:1px solid rgba(46,204,113,0.08);margin-bottom:18px}
+.header h1{margin:0;font-size:20px;color:var(--accent)}
+.header .sub{margin:6px 0 0;color:var(--muted);font-size:13px}
+.main{display:grid;grid-template-rows:auto 1fr;gap:12px}
+.composer{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;border:1px solid rgba(46,204,113,0.04)}
+textarea#postInput{width:100%;background:transparent;border:1px dashed rgba(255,255,255,0.03);padding:12px;border-radius:8px;color:var(--text);resize:vertical;outline:none}
+.controls{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.btn{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text);padding:8px 12px;border-radius:8px;cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#041006}
+.btn:hover{opacity:0.95}
+.feed{margin-top:4px;display:flex;flex-direction:column;gap:10px}
+.post{background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(0,0,0,0.06));padding:12px;border-radius:10px;border-left:4px solid rgba(46,204,113,0.15)}
+.post .meta{font-size:12px;color:var(--muted);margin-bottom:6px}
+.post .text{white-space:pre-wrap;color:var(--text)}
+.footer{margin-top:12px;color:var(--muted);font-size:12px;text-align:center}
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0.6))}
+.modal.hidden{display:none}
+.modal-content{background:#07110a;padding:16px;border-radius:10px;max-width:720px;width:90%;border:1px solid rgba(46,204,113,0.06)}
+.modal-content textarea{width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--text)}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+@media (max-width:600px){.app{padding:10px}.header h1{font-size:18px}}
+  </style>
 </head>
 <body>
   <div class="app">
@@ -49,6 +77,6 @@
     </div>
   </div>
 
-  <script src="static/app.js" defer></script>
+  <script src="./static/app.js" defer></script>
 </body>
 </html>
